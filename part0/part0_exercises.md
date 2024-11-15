@@ -2,21 +2,27 @@
 ### Exercise 0.4: Mermaid Diagram for creating new note on regular browser
 ```mermaid
 graph TD
-    A[Create new note] --> B[Post new_note]
-    B --> C[Get notes]
-    C --> D[Get main.css]
-    D --> E[Get main.js]
-    E --> F[Get data.json]
+    A[User submits new note] --> B[POST new_note to server]
+    B --> C[Server redirects to notes]
+    C --> D[GET notes]
+    D --> E[GET main.css]
+    E --> F[GET main.js]
+    F --> G[GET data.json]
+    G --> H[Browser shows updated notes]
+    Page will reload with new data
 ```
 ### Exercise 0.5: Mermaid Diagram for using single page app
 ```mermaid
 graph TD
-    A[spa document] --> B[main.css]
-    B --> C[spa.js]
-    C --> D[data.json]
+    A[GET spa document] --> B[GET main.css]
+    B --> C[GET spa.js]
+    C --> D[GET data.json]
+    Page will dynamically load new note
 ```
 ### Exercise 0.6: Mermaid Diagram for creating new note on single page app
 ```mermaid
 graph TD
-    A[Create new note] --> B[Post new_note_spa]
+    A[User submits new note] --> B[POST new_note_spa to server]
+    B --> C[Server confirms submission]
+    C --> D[Page is dynamically updated with new note]
 ```
