@@ -1,9 +1,10 @@
 # Part0 exercises
-# mermaid diagram
+### Exercise 0.4: Mermaid Diagram for creating new note
 ```mermaid
   graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+      Create new note-->Post: new_note;
+      Post: new_note-->Get: notes;
+      Get: notes-->Get main.css;
+      Get main.css-->Get main.js;
+      Get main.js-->data.json;
 ```
